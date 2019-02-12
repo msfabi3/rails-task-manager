@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # resources :tasks, only: [:create, :index, :destroy]
   get 'tasks', to: 'tasks#index'
   get 'tasks/new', to: 'tasks#new', as: 'new'
   post 'tasks', to: 'tasks#create'
@@ -10,3 +11,5 @@ Rails.application.routes.draw do
 
   root to: 'tasks#home'
 end
+
+
